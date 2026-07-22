@@ -1,0 +1,40 @@
+{
+  "name": "duostream-host-pc",
+  "version": "1.0.0",
+  "description": "Host PC for DuoStream Access Management",
+  "main": "src/main.js",
+  "author": "",
+  "license": "MIT",
+  "build": {
+    "appId": "com.duostream.host",
+    "productName": "DuoStream Host PC",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "src/**/*",
+      "public/**/*",
+      "build/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    }
+  }
+}

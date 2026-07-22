@@ -22,8 +22,10 @@ const createWindow = () => {
     icon: path.join(__dirname, '../assets/icon.png')
   });
 
+  // In development, load from localhost
+  // In production, load from build folder
   const startUrl = isDev
-    ? 'http://localhost:3000'
+    ? 'http://localhost:5173'  // Vite dev server default port
     : `file://${path.join(__dirname, '../build/index.html')}`;
 
   mainWindow.loadURL(startUrl);

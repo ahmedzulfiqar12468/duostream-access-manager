@@ -4,8 +4,22 @@ const socketIO = require('socket.io');
 const bcryptjs = require('bcryptjs');
 const { v4: uuidv4 } = require('uuid');
 const path = require('path');
-const { SOCKET_EVENTS, DEFAULT_PORTS } = require('../../shared/constants');
 const db = require('./database');
+
+// Socket.io event names
+const SOCKET_EVENTS = {
+  RELAY_AUTHENTICATE: 'relay:authenticate',
+  AUTH_SUCCESS: 'auth:success',
+  AUTH_FAILED: 'auth:failed',
+  SESSION_START: 'session:start',
+  SESSION_END: 'session:end',
+  TIME_UPDATE: 'time:update'
+};
+
+const DEFAULT_PORTS = {
+  HOST_PC: 3001,
+  RELAY_PC: 3002
+};
 
 let io;
 let app;

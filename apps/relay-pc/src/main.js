@@ -1,8 +1,10 @@
 const { app, BrowserWindow, Menu, ipcMain } = require('electron');
 const path = require('path');
-const isDev = require('electron-is-dev');
 const server = require('./server');
 const db = require('./database');
+
+// Simple isDev check without electron-is-dev
+const isDev = process.env.NODE_ENV === 'development' || process.argv.includes('--dev');
 
 let mainWindow;
 let serverInstance;

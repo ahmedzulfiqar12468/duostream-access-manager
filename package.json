@@ -1,0 +1,20 @@
+{
+  "name": "duostream-access-manager",
+  "version": "1.0.0",
+  "description": "Relay and Host PC application for managing DuoStream access with time limits and user management",
+  "scripts": {
+    "install:all": "npm install && cd apps/host-pc && npm install && cd ../relay-pc && npm install",
+    "start:host": "cd apps/host-pc && npm start",
+    "start:relay": "cd apps/relay-pc && npm start",
+    "dev:host": "cd apps/host-pc && npm run dev",
+    "dev:relay": "cd apps/relay-pc && npm run dev"
+  },
+  "keywords": [
+    "duostream",
+    "tailscale",
+    "access-management",
+    "electron"
+  ],
+  "author": "",
+  "license": "MIT"
+}
